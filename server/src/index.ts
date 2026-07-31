@@ -9,6 +9,8 @@ dotenv.config();
 // ROUTE IMPORTS
 import dashboardRouters from "./routes/dashboardRoutes";
 import productsRouters from "./routes/productRouters";
+import usersRouters from "./routes/userRouters";
+import expenseRouters from "./routes/expenseRoutes";
 
 // CONFIGURATIONS
 const app = express();
@@ -23,6 +25,8 @@ app.use(cors());
 //ROUTES
 app.use("/dashboard", dashboardRouters);
 app.use("/products", productsRouters);
+app.use("/users", usersRouters);
+app.use("/expenses", expenseRouters);
 // SERVER
 const port = process.env.PORT || 3001;
 app.listen(port, () => {

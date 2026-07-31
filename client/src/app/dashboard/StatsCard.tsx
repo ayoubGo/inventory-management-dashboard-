@@ -26,7 +26,7 @@ function StatsCard({ title, primaryIcon, details, dateRange }: StatCardProps) {
     value >= 0 ? "text-green-500" : "text-red-500";
 
   return (
-    <div className="md:row-span-1 xl:row-span-2 bg-white col-span-1 shadow-md rounded-2xl flex flex-col justify-between">
+    <div className="md:row-span-1 xl:row-span-2 bg-white col-span-1 shadow-md rounded-2xl flex flex-col justify-between ">
       {/* Header */}
       <div>
         <div className="flex justify-between items-center px-5 mb-2 mt-4">
@@ -41,18 +41,18 @@ function StatsCard({ title, primaryIcon, details, dateRange }: StatCardProps) {
         <div className="rounded-full p-5 bg-blue-50 border-sky-300 border-[1px]">
           {primaryIcon}
         </div>
-        <div className="flex-1 ">
+        <div className="flex-1">
           {details.map((detail, index) => (
             <React.Fragment key={index}>
-              <div className="flex items-center justify-between my-4">
+              <div className="flex items-center justify-between my-4 ">
                 <span className="text-gray-500">{detail.title}</span>
                 <span className="font-bold text-gray-800">{detail.amount}</span>
                 <div>
                   <detail.IconComponent
-                    className={`w-4 h-4 mr-1 ${getChangeColor(detail.changePercentage)}`}
+                    className={`w-4 h-4 mr-1  ${getChangeColor(detail.changePercentage)}`}
                   />
                   <span
-                    className={`font-medium ${getChangeColor(detail.changePercentage)}`}
+                    className={`font-medium  ${getChangeColor(detail.changePercentage)}`}
                   >
                     {formatPercentage(detail.changePercentage)}
                   </span>

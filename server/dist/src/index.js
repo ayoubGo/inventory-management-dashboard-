@@ -13,6 +13,8 @@ dotenv_1.default.config();
 // ROUTE IMPORTS
 const dashboardRoutes_1 = __importDefault(require("./routes/dashboardRoutes"));
 const productRouters_1 = __importDefault(require("./routes/productRouters"));
+const userRouters_1 = __importDefault(require("./routes/userRouters"));
+const expenseRoutes_1 = __importDefault(require("./routes/expenseRoutes"));
 // CONFIGURATIONS
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
@@ -25,6 +27,8 @@ app.use((0, cors_1.default)());
 //ROUTES
 app.use("/dashboard", dashboardRoutes_1.default);
 app.use("/products", productRouters_1.default);
+app.use("/users", userRouters_1.default);
+app.use("/expenses", expenseRoutes_1.default);
 // SERVER
 const port = process.env.PORT || 3001;
 app.listen(port, () => {

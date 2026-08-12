@@ -80,7 +80,7 @@ function ProductsPage() {
             >
               <div className="flex flex-col items-center">
                 <Image
-                  src={`https://s3-inventorymanagement.s3.eu-west-3.amazonaws.com/logo.png${Math.floor(Math.random() * 3) + 1}.png`}
+                  src={`https://s3-inventorymanagement.s3.eu-west-3.amazonaws.com/product${Math.floor(Math.random() * 3) + 1}.png`}
                   alt={product.name}
                   width={150}
                   height={150}
